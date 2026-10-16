@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float L, B, H;
+    printf("Lado do quadrado: "); 
+    scanf("%f", &L);
+    printf("Base e Altura: "); 
+    scanf("%f %f", &B, &H);
+    
+    printf("Quadrado: %.2f\n", L * L);
+    printf("Retangulo: %.2f\n", B * H);
+    printf("Triangulo: %.2f\n", (B * H) / 2.0);
+    return 0;
+}

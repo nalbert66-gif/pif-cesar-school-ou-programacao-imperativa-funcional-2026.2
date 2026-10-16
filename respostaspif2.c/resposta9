@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("Soma: %d\n", a + b);
+    printf("Sub: %d\n", a - b);
+    printf("Mult: %d\n", a * b);
+    if (b != 0) {
+        printf("Div: %.2f\n", (float)a / b);
+    }
+    return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    float comp, larg, preco, perimetro, total_arame, custo;
+    scanf("%f %f %f", &comp, &larg, &preco);
+    
+    perimetro = 2 * (comp + larg);
+    total_arame = perimetro * 3.0; 
+    custo = total_arame * preco;
+    
+    printf("Metros de arame: %.2f | Custo total: R$%.2f\n", total_arame, custo);
+    return 0;
+}

@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int d, m, a;
+    printf("Digite a data (dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &d, &m, &a);
+    printf("Data invertida: %04d/%02d/%02d\n", a, m, d);
+    return 0;
+}

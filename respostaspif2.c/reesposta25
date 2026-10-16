@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    float base;
+    scanf("%f", &base);
+    float liquido = base * 0.98;
+    printf("Salario Liquido: R$%.2f\n", liquido);
+    return 0;
+}

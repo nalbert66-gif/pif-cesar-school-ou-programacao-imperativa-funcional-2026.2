@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long int a = 1, b = 1, proximo;
+    
+    printf("Digite o numero do termo de Fibonacci (N): ");
+    scanf("%d", &n);
+    
+    if (n <= 0) {
+        printf("Por favor, digite um numero maior que zero.\n");
+        return 0;
+    }
+    
+    printf("Sequencia ate o termo %d: ", n);
+    for (int i = 1; i <= n; i++) {
+        if (i == 1 || i == 2) {
+            printf("1 ");
+        } else {
+            proximo = a + b;
+            a = b;
+            b = proximo;
+            printf("%lld ", proximo);
+        }
+    }
+    
+    printf("\nValor do termo %d: %lld\n", n, (n == 1 || n == 2) ? 1 : proximo);
+    
+    return 0;
+}

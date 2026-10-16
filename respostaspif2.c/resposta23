@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int h_ini, m_ini, s_ini, duracao;
+    scanf("%d %d %d %d", &h_ini, &m_ini, &s_ini, &duracao);
+    
+    int tempo_total_seg = (h_ini * 3600) + (m_ini * 60) + s_ini + duracao;
+    int h_fim = (tempo_total_seg / 3600) % 24; 
+    int m_fim = (tempo_total_seg % 3600) / 60;
+    int s_fim = tempo_total_seg % 60;
+    
+    printf("Termino: %02d:%02d:%02d\n", h_fim, m_fim, s_fim);
+    return 0;
+}

@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+    int ano_nascimento = 1998;
+    printf("Eu nasci no ano de %d.\n", ano_nascimento);
+    return 0;
+}

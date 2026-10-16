@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int senha_secreta = 2026;
+    int palpite;
+    int tentativas = 0;
+    
+    while (tentativas < 3) {
+        printf("Digite a senha: ");
+        scanf("%d", &palpite);
+        tentativas++;
+        
+        if (palpite == senha_secreta) {
+            printf("Acesso Concedido! Tentativas utilizadas: %d\n", tentativas);
+            return 0;
+        } else {
+            printf("Senha incorreta.\n");
+        }
+    }
+    
+    printf("Conta Bloqueada por Seguranca!\n");
+    
+    return 0;
+}

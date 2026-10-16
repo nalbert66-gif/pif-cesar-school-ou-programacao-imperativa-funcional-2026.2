@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int ant = n, suc = n;
+    ant--;
+    suc++;
+    printf("Antecessor: %d | Sucessor: %d\n", ant, suc);
+    return 0;
+}

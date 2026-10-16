@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    const float PI = 3.141593;
+    float raio;
+    scanf("%f", &raio);
+    printf("Area da superficie: %.2f\n", 4 * PI * raio * raio);
+    printf("Volume: %.2f\n", (4.0 / 3.0) * PI * raio * raio * raio); 
+    return 0;
+}

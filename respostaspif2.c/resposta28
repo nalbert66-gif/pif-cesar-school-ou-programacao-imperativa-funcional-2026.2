@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int hrs_normais, hrs_extras;
+    scanf("%d %d", &hrs_normais, &hrs_extras);
+    
+    float bruto = (hrs_normais * 10.0) + (hrs_extras * 15.0);
+    float imposto = (bruto > 12000.0) ? (bruto - 12000.0) * 0.10 : 0.0;
+    
+    printf("Bruto Anual: R$%.2f\n", bruto);
+    printf("Imposto Devido: R$%.2f\n", imposto);
+    return 0;
+}

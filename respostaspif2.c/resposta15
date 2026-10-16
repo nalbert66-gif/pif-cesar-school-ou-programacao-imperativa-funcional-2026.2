@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    float n1, n2, n3, n4, simples, ponderada;
+    scanf("%f %f %f %f", &n1, &n2, &n3, &n4);
+    simples = (n1 + n2 + n3 + n4) / 4.0;
+    ponderada = ((n1 * 1) + (n2 * 1) + (n3 * 2) + (n4 * 2)) / 6.0;
+    printf("Simples: %.2f | Ponderada: %.2f\n", simples, ponderada);
+    return 0;
+}

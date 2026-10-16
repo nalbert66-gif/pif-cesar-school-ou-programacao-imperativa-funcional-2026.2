@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    char maiuscula;
+    scanf(" %c", &maiuscula);
+    char minuscula = maiuscula + 32; 
+    printf("Minuscula: %c\n", minuscula);
+    return 0;
+}

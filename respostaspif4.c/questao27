@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int horas;
+    float valor = 0;
+    scanf("%d", &horas);
+    
+    if (horas >= 1) valor += (horas >= 2 ? 2 * 2.0 : 1 * 2.0);
+    if (horas >= 3) valor += (horas >= 4 ? 2 * 2.5 : 1 * 2.5);
+    if (horas >= 5) valor += (horas - 4) * 3.0;
+    
+    printf("Tempo total: %d hora(s)\nValor final: R$ %.2f\n", horas, valor);
+    return 0;
+}

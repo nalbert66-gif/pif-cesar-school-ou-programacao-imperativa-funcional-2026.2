@@ -1,0 +1,6 @@
+media = (nota1 + nota2) / 2.0;
+if (media >= 7.0) {
+    situacao = 'A';
+} else {
+    situacao = 'R';
+}

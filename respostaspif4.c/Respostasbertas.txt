@@ -1,0 +1,34 @@
+Questão 01
+a) Escrever if (x = 0) realiza uma atribuição de 0 à variável x e avalia o resultado dessa atribuição. Como 0 é considerado "falso" em C, o bloco de código não será executado. Já if (x == 0) faz uma comparação lógica para verificar se x é igual a 0, sem alterar seu valor.
+b) Na Linguagem C, o valor numérico 0 (zero) é avaliado como "falso". Qualquer valor diferente de zero (positivo ou negativo) é interpretado como "verdadeiro".
+c) O bloco será executado. A instrução if (x = -5) atribui -5 à variável x. Como -5 é diferente de zero, a expressão é avaliada como verdadeira pelo padrão C.
+
+Questão 02
+a) A mensagem impressa será "Opção B". Isso ocorre porque o else se associa ao if mais próximo que não possui um else correspondente, ou seja, ao if (y > 10). Como x = 15 (entra no primeiro if) e y = 5 (falha no segundo if), o fluxo cai no else.
+b) A regra oficial é que um else pertence ao if não fechado mais próximo imediatamente anterior a ele no mesmo bloco.
+
+Questão 03
+a) O operador verifica a condição (media >= 7.0). Como a média é 6.8 (falso), ele ignora o valor após o ? ('A') e retorna o valor após o : ('R'). A variável situacao armazenará o caractere 'R'.
+
+c) Não. O operador ternário é uma expressão que retorna um valor e só deve ser usado para atribuições simples ou retornos curtos. Ele não pode substituir blocos if-else que executam múltiplos comandos estruturais ou que não retornam valores (como laços ou múltiplos printf).
+
+Questão 04
+a) Saída:
+Prata
+Ouro
+Isso ocorreu porque faltou o comando break no case 2. O programa entrou no case 2, imprimiu "Prata" e continuou executando as instruções seguintes (do case 3) até encontrar um break.
+b) O break interrompe a execução do bloco switch, fazendo o programa sair da estrutura. A omissão do break causa o fenômeno conhecido como fall-through.
+c) Apenas tipos inteiros (como int e char). Não é permitido usar float ou double porque valores de ponto flutuante podem sofrer problemas de precisão na representação binária, o que impossibilita a comparação de igualdade exata exigida pelo switch.
+
+Questão 05
+a) Saída: a = 0, b = 5, c = 8. O incremento ++b foi ignorado.
+b) No operador E (&&), se a primeira condição for falsa, toda a expressão já é falsa, então a segunda condição não é avaliada. No operador OU (||), se a primeira condição for verdadeira, a expressão já é verdadeira e a segunda não é avaliada.
+c) Se a condição fosse if (a == 0 || ++b > 5), a saída seria a = 0, b = 5, c = 20. Como a == 0 é verdadeiro, ocorre o curto-circuito do ||. O ++b é ignorado, b continua 5, e o bloco do if é executado (c += 10).
+
+Questão 06
+a) Saída para 65:
+Idoso
+Adulto
+Jovem
+Ocorrem múltiplas mensagens porque os ifs são independentes. A idade 65 satisfaz todas as condições (>= 60, >= 18 e >= 12).
+b) Uma sequência de comandos if independentes avalia todas as condições, uma por uma. Uma cadeia else-if encadeada avalia até encontrar a primeira condição verdadeira; quando encontra, executa o bloco e salta o resto da estrutura.

@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    float km, litros, consumo;
+    scanf("%f %f", &km, &litros);
+    consumo = km / litros;
+    
+    if (consumo < 8.0) printf("Venda o carro!\n");
+    else if (consumo <= 14.0) printf("Economico!\n");
+    else printf("Super economico!\n");
+    
+    return 0;
+}

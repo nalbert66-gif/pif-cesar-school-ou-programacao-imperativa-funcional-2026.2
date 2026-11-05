@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int valor, pago, troco, notas;
+    scanf("%d %d", &valor, &pago);
+    
+    if (pago < valor) {
+        printf("Erro: Valor entregue insuficiente!\n");
+    } else {
+        troco = pago - valor;
+        printf("Troco: R$ %d\n", troco);
+        
+        notas = troco / 100; troco %= 100;
+        if (notas > 0) printf("%d nota(s) de R$ 100\n", notas);
+        
+        notas = troco / 50; troco %= 50;
+        if (notas > 0) printf("%d nota(s) de R$ 50\n", notas);
+        
+        notas = troco / 20; troco %= 20;
+        if (notas > 0) printf("%d nota(s) de R$ 20\n", notas);
+        
+        notas = troco / 10; troco %= 10;
+        if (notas > 0) printf("%d nota(s) de R$ 10\n", notas);
+        
+        notas = troco / 5; troco %= 5;
+        if (notas > 0) printf("%d nota(s) de R$ 5\n", notas);
+        
+        notas = troco / 2; troco %= 2;
+        if (notas > 0) printf("%d nota(s) de R$ 2\n", notas);
+    }
+    return 0;
+}

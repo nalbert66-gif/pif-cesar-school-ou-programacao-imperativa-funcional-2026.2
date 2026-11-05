@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    float valor;
+    int estado;
+    scanf("%f %d", &valor, &estado);
+    
+    switch(estado) {
+        case 1: printf("Preco Final (MG): %.2f\n", valor * 1.07); break;
+        case 2: printf("Preco Final (SP): %.2f\n", valor * 1.12); break;
+        case 3: printf("Preco Final (RJ): %.2f\n", valor * 1.15); break;
+        case 4: printf("Preco Final (MS): %.2f\n", valor * 1.08); break;
+        default: printf("Erro: Estado invalido!\n");
+    }
+    return 0;
+}

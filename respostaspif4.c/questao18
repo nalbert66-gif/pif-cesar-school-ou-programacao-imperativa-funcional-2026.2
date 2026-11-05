@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float temp;
+    printf("1. C para F\n2. C para K\n3. F para C\n4. K para C\nEscolha: ");
+    scanf("%d", &opcao);
+    scanf("%f", &temp);
+    
+    switch(opcao) {
+        case 1: printf("%.2f F\n", temp * 1.8 + 32); break;
+        case 2: printf("%.2f K\n", temp + 273.15); break;
+        case 3: printf("%.2f C\n", (temp - 32) / 1.8); break;
+        case 4: printf("%.2f C\n", temp - 273.15); break;
+        default: printf("Opcao invalida\n");
+    }
+    return 0;
+}

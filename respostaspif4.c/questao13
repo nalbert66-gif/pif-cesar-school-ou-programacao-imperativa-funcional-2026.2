@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    char op;
+    float n1, n2;
+    printf("Escolha a operacao (+, -, *, /, ^): ");
+    scanf(" %c", &op);
+    scanf("%f %f", &n1, &n2);
+    
+    switch(op) {
+        case '+': printf("%.2f\n", n1 + n2); break;
+        case '-': printf("%.2f\n", n1 - n2); break;
+        case '*': printf("%.2f\n", n1 * n2); break;
+        case '/': 
+            if (n2 != 0) printf("%.2f\n", n1 / n2);
+            else printf("Erro: Divisao por zero!\n");
+            break;
+        case '^': printf("%.2f\n", pow(n1, n2)); break;
+        default: printf("Operacao invalida!\n");
+    }
+    return 0;
+}

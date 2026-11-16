@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+#define SQR(x) ((x)*(x))
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
+#define MIN(a,b) ((a) < (b) ? (a) : (b))
+
+int main() {
+    int v1, v2;
+    scanf("%d %d", &v1, &v2);
+    
+    printf("Quadrados: %d, %d\n", SQR(v1), SQR(v2));
+    printf("Maior: %d\n", MAX(v1, v2));
+    printf("Menor: %d\n", MIN(v1, v2));
+    
+    return 0;
+}

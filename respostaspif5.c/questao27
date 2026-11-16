@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+float celsiusParaFahrenheit(float c);
+float celsiusParaKelvin(float c);
+float fahrenheitParaCelsius(float f);
+float kelvinParaCelsius(float k);
+
+int main() {
+    int op;
+    float temp, conv;
+    
+    printf("1-C para F\n2-C para K\n3-F para C\n4-K para C\nEscolha: ");
+    scanf("%d", &op);
+    scanf("%f", &temp);
+    
+    switch(op) {
+        case 1: conv = celsiusParaFahrenheit(temp); break;
+        case 2: conv = celsiusParaKelvin(temp); break;
+        case 3: conv = fahrenheitParaCelsius(temp); break;
+        case 4: conv = kelvinParaCelsius(temp); break;
+        default: printf("Invalido.\n"); return 0;
+    }
+    
+    printf("%.2f\n", conv);
+    return 0;
+}
+
+float celsiusParaFahrenheit(float c) { return c * 1.8 + 32.0; }
+float celsiusParaKelvin(float c) { return c + 273.15; }
+float fahrenheitParaCelsius(float f) { return (f - 32.0) / 1.8; }
+float kelvinParaCelsius(float k) { return k - 273.15; }

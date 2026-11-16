@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int somaDigitos(int n);
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    printf("%d\n", somaDigitos(num));
+    return 0;
+}
+
+int somaDigitos(int n) {
+    // Caso base: n == 0
+    if (n == 0) return 0;
+    // Passo recursivo: ultimo digito + somaDigitos do resto do numero
+    return (n % 10) + somaDigitos(n / 10);
+}

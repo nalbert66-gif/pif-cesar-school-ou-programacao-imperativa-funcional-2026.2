@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int mdc(int a, int b);
+void simplifica(int num, int den);
+
+int main() {
+    int n, d;
+    scanf("%d %d", &n, &d);
+    
+    if (n > 0 && d > 0) {
+        printf("MDC: %d\n", mdc(n, d));
+        simplifica(n, d);
+    }
+    return 0;
+}
+
+int mdc(int a, int b) {
+    if (b == 0) return a;
+    return mdc(b, a % b);
+}
+
+void simplifica(int num, int den) {
+    int divisor = mdc(num, den);
+    printf("Fracao simplificada: %d/%d\n", num / divisor, den / divisor);
+}

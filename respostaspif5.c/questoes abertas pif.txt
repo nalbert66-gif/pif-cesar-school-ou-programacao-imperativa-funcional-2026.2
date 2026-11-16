@@ -1,0 +1,39 @@
+Questão 01
+a) Protótipo: float celsius(float); (informa ao compilador que a função existe). Chamada: c = celsius(f); (executa a função passando o argumento). Definição: o bloco float celsius(float fahr) { ... } (o código real da função).
+b) O protótipo serve para o compilador checar antecipadamente se você está chamando a função com os tipos e a quantidade certa de argumentos. Se fosse omitido (em padrões C mais antigos), o compilador assumiria que ela retorna int e não verificaria os parâmetros, gerando cálculos errados ou travamentos na execução.
+c) Tipo float. O tipo de uma função refere-se exclusivamente ao tipo do dado que ela devolve como resultado pelo comando return, e não ao que entra pelos parâmetros.
+
+Questão 02
+a) Apenas um valor. O programador tentou retornar a soma e a média usando vírgula, mas o operador vírgula em C avalia a expressão e retorna apenas o último valor. Ou seja, apenas a média será retornada.
+b) O return; força a saída imediata da função, voltando para onde foi chamada. Não é obrigatório no final de uma função void, pois ela encerra naturalmente ao chegar na chave fechando o bloco }.
+
+Questão 03
+a) exibe_mensagem: tem parâmetro de entrada (string/char*) e não tem retorno (void). obter_codigo: não tem parâmetro (void) e tem retorno (int). limpar_tela: não tem parâmetro e não tem retorno.
+b) Uma função com retorno calcula e devolve um dado para ser salvo em variável ou usado numa expressão (ex: calcular imposto). Um procedimento (void) apenas executa uma ação visual ou no sistema sem devolver resposta (ex: imprimir um cabeçalho de relatório).
+c) Não é válida. Como limpar_tela é do tipo void, ela não produz nenhum valor que possa ser armazenado na variável x. Vai gerar erro de compilação.
+
+Questão 04
+a) Caso base: n == 0. Passo recursivo: (long)n * fatorial(n - 1). Sem o caso base, a função entraria num loop infinito de chamadas, estourando a memória da pilha (Stack Overflow).
+b)
+Empilhamento:
+fatorial(4) -> 4 * fatorial(3)
+fatorial(3) -> 3 * fatorial(2)
+fatorial(2) -> 2 * fatorial(1)
+fatorial(1) -> 1 * fatorial(0)
+fatorial(0) -> retorna 1 (base)
+Desempilhamento:
+fatorial(1) -> 1 * 1 = 1
+fatorial(2) -> 2 * 1 = 2
+fatorial(3) -> 3 * 2 = 6
+fatorial(4) -> 4 * 6 = 24
+c) A cada chamada, as variáveis e o endereço de retorno são alocados no topo da Pilha (Stack). Sem o caso base, a função aloca memória infinitamente até que o sistema operacional encerre o programa por esgotamento de memória.
+
+Questão 05
+a) SQR(2+3) vai imprimir 11, porque a substituição fica 2+3*2+3 (a multiplicação acontece primeiro). DOBRO(2+3) vai imprimir 8, porque a substituição fica 2+3*2. Elas dão resultados errados porque faltaram parênteses em torno do x e da expressão inteira.
+b) Não tem ponto e vírgula porque é uma substituição literal de texto. Se tivesse ;, ele seria colado no meio do código, quebrando a sintaxe. Usamos maiúsculas para que o programador bata o olho e saiba que é uma substituição de pré-processador, não uma variável.
+c) O espaço após o nome da macro quebra a sintaxe. A forma correta é #define PRN(n) printf("%d", n). A principal diferença é que a macro é só um "copiar e colar" de texto antes da compilação, enquanto a função é um bloco de código compilado que reside num endereço de memória e faz checagem estrita de tipos.
+
+Questão 06
+a) <stdio.h> manda o compilador procurar o arquivo nas pastas padrões do sistema/biblioteca. "areas.h" manda procurar primeiro na mesma pasta onde está o código fonte do seu projeto.
+b) Desfaz (apaga) a definição da macro SOMA. #undef SOMA(x,y) está incorreto porque o comando #undef só precisa do identificador base (o nome) para removê-lo, ignorando os argumentos.
+c) Será impresso "Modo normal". Essa decisão ocorre durante o pré-processamento. Elas não aparecem no executável final porque o pré-processador simplesmente deleta as linhas descartadas pelo #if e limpa as diretivas, enviando ao compilador apenas o código puro do bloco válido.

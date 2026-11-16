@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+long potencia(int base, int expoente);
+
+int main() {
+    int base, expo;
+    scanf("%d %d", &base, &expo);
+    
+    if (expo >= 0) {
+        printf("%ld\n", potencia(base, expo));
+    } else {
+        printf("Expoente negativo invalido.\n");
+    }
+    return 0;
+}
+
+long potencia(int base, int expoente) {
+    
+    if (expoente == 0) return 1;
+    // Passo recursivo: base vezes a potencia com expoente reduzido
+    return base * potencia(base, expoente - 1);
